@@ -1,4 +1,4 @@
-#inlcude<stio.h>
+#inlcude<stdio.h>
 
 int main()
 {	
