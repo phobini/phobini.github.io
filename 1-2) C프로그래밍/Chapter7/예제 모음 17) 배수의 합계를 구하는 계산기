@@ -1,0 +1,27 @@
+#include<stdio.h>
+
+int main()
+{
+	int n1, n2, n3, t=0;
+
+	printf("합계의 시작값: ");
+	scanf_s("%d", &n1);
+
+	printf("합계의 끝값: ");
+	scanf_s("%d", &n2);
+
+	printf("배수: ");
+	scanf_s("%d", &n3);
+	
+	while (n1 <= n2)
+	{
+		if (n1 % n3 != 0)
+		{
+			n1++;
+			continue;
+		}
+		t = t + n1;
+		n1++;
+	}
+	printf("%d부터 %d까지의 4배수의 합계는 %d 입니다.\n", n1, n2, t);
+}
