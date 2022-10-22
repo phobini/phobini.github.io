@@ -1,0 +1,14 @@
+#include<stdio.h>
+
+int main() 
+{
+	int d;
+	float m;
+
+	m = 1;
+	for (d = 2; d <= 30; d++)
+	{
+		m *= 2;
+		printf("%d일날 현재 금액=%.6f\n", d, m);
+	}
+}
