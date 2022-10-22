@@ -1,0 +1,16 @@
+#include<stdio.h>
+
+int main()
+{
+	int a, i;
+	printf("출력하고 싶은 단 입력: ");
+	scanf_s("%d", &a);
+
+	i = 2;
+
+	while (i < 10)
+	{
+		printf("%d x %d = %d\n", a, i, a * i);
+		i++;
+	}
+}
