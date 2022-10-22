@@ -2,22 +2,17 @@
 
 int main()
 {
-	int i, a, t;
+	int i=1, t = 0, a, b;
 
-	printf("2이상의 숫자 입력: ");
+	printf("숫자 몇 개를 입력하시겠습니까? ");
 	scanf_s("%d", &a);
 
-	t = 0;
-	i = 2;
 	while (i <= a)
 	{
-		if (i % 2 != 0)
-		{
-			i++;
-			continue;
-		}
-		t = t + i;
+		printf("값을 입력하시오: \n");
+		scanf_s("%d", &b);
+		t = t + b;
 		i++;
 	}
-	printf("%d까지의 합은: %d\n", a, t);
+	printf("총합은 %d입니다. \n", t);
 }
