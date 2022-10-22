@@ -1,0 +1,22 @@
+#include<stdio.h>
+
+int main()
+{
+	int y, h, i, j;
+
+	printf("반감기를 입력하시오(년): ");
+	scanf_s("%d", &y);
+
+	i = 1;
+	j = 0;
+
+	do {
+		i *= 2;
+		j++;
+		h = y * j;
+
+		printf("%d년 후에 남은 양 = %f\n", h, (float)100 / i);
+
+	} while ((100 / i) >= (100 / 10));
+	printf("1/10 이하로 되기 까지 걸린 시간=%d년\n", h);
+}
