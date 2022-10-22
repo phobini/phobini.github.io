@@ -1,0 +1,33 @@
+#include<stdio.h>
+
+#include<stdlib.h> 
+/*rand() 함수 포함 라이브러리,
+이것만 호출하면 랜덤값이 항상 반복됨. 이건 랜덤이 아님
+그래서 #include<time.h>을 쓰고 srand(time(NULL))를 rand() 쓰기 전에 꼭 적어 줘야함.*/
+#include<time.h> 
+/*1초 단위로 매번 다른 random값 생성 도와줌*/
+
+int main() /*숫자 추측 게임*/
+{
+	int num, answer, count;
+
+	srand(time(NULL));
+	num = rand() % 101 + 1; /*숫자 1~100 사이 난수 설정. +1 안하면 0~99*/
+
+	answer = 0;
+	count = 0;
+
+	while (num != answer)
+	{
+		count += 1;
+		printf("정답을 추측하여 보시오: ");
+		scanf_s("%d", &answer);
+
+		if (num == answer)
+			printf("축하합니다. 시도횟수=%d\n", count);
+		else if (num > answer)
+			printf("제시한 정수가 낮습니다.\n");
+		else if (num < answer)
+			printf("제시한 정수가 높습니다.\n");
+	}
+}
