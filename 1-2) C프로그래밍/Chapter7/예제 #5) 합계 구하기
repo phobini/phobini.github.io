@@ -1,0 +1,23 @@
+#include<stdio.h>
+
+int main()
+{
+	int i, a, t;
+
+	printf("2이상의 숫자 입력: ");
+	scanf_s("%d", &a);
+
+	t = 0;
+	i = 2;
+	while (i <= a)
+	{
+		if (i % 2 != 0)
+		{
+			i++;
+			continue;
+		}
+		t = t + i;
+		i++;
+	}
+	printf("%d까지의 합은: %d\n", a, t);
+}
