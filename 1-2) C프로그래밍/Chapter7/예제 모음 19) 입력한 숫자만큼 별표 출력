@@ -1,0 +1,25 @@
+#inlcude<stio.h>
+
+int main()
+{	
+	char nums[100], num;
+	int  i = 0, j = 0;
+	int star;
+
+	printf("숫자 여러 개 입력: ");
+	scanf_s("%s", nums, sizeof(nums));
+	
+	num = nums[i];
+
+	while(num != '\0')
+	{
+		star = (int)num - 48;
+
+		for (j = 0; j < star; j++)
+			printf("*");
+		printf("\n");
+
+		i++;
+		num = nums[i];
+	}
+}
